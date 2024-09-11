@@ -23,6 +23,7 @@ class MainActivity : ComponentActivity() {
 
         GlobalScope.launch {
             getApiData()
+            getApiData2()
         }
 
     }
@@ -32,6 +33,13 @@ class MainActivity : ComponentActivity() {
         Log.d("tag_coroutine", "start getting data 1")
         delay(5000)
         Log.d("tag_coroutine", "got data 1")
+
+    }
+    private suspend fun getApiData2() {
+
+        Log.d("tag_coroutine", "start getting data 2")
+        delay(5000)
+        Log.d("tag_coroutine", "got data 2")
 
     }
 }
